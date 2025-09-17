@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pets-API</title>
+
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- tailwind CSS -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!--daisyui CDN-->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+
+  <!-- font-awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .lato {
+      font-family: "Lato", serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Spinner styles */
+    /* #spinner {
+      display: none;
+      width: 40px;
+      height: 40px;
+      border: 4px solid rgba(0, 0, 0, 0.1);
+      border-top: 4px solid #000;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 20px auto;
+      
+    } */
+
+    /* Spinner animation */
+    /* @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    } */
+  </style>
+</head>
+
+<body class="lato">
+  <header class=" md: md:mx-auto mx-3 md:mr-20 md:py-5 pt-3">
+    <div class="flex justify-between items-center">
+      <div class="flex items-center gap-2">
+        <button class="btn md:invisible visible" popovertarget="popover-1" style="anchor-name:--anchor-1">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul class="dropdown menu w-52 rounded-box bg-base-100 shadow-sm" popover id="popover-1"
+          style="position-anchor:--anchor-1">
+          <li class="cursor-pointer"><a href="#deal">Home</a></li>
+          <li class="cursor-pointer"><a href="#price">Shop</a></li>
+          <li class="cursor-pointer"><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="md:visible invisible"><img class="md:w-6" src="./img/logo.webp" alt=""></div>
+        <p class="text-xl font-bold md:ml-0 -ml-8">Peddy</p>
+      </div>
+
+      <div class="md:visible invisible">
+        <ul class="flex items-center gap-5">
+          <li class="cursor-pointer"><a href="#deal">Home</a></li>
+          <li class="cursor-pointer"><a href="#price">Shop</a></li>
+          <li class="cursor-pointer"><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <img class="bg-white hover:bg-gray-300 border-1 border-gray-300 p-2 rounded-full"
+          src="https://img.icons8.com/?size=32&id=22396&format=png" alt="">
+      </div>
+    </div>
+  </header>
+  <main class=" md:w-11/12 md:mx-auto mx-5">
+    <section class="text-center  mt-5">
+      <h3 class="text-gray-500 md:text-xl  font-bold mb-5">Bringing Families Together ❤️ </h3>
+      <h1 class="text-2xl md:text-5xl font-extrabold  mb-5 md:visible invisible">Your Path to Adoption <br> Starts Here
+      </h1>
+      <h1 class="text-3xl md:text-5xl font-extrabold  mb-5 md:invisible visible md:mt-0 -mt-22">Your Path to Adoption
+        Starts Here</h1>
+      <p class="text-gray-500 text-sm md:text-base mb-5  md:visible invisible md:-mt-20 md:-mb-3">It is a long
+        established fact that a reader will be distracted by
+        the readable content of a page when looking <br> at its layout. The point of using Lorem Ipsum is that it has a.
+      </p>
+      <p class="text-gray-500 text-sm md:text-base mb-5 md:invisible visible md:mt-0 -mt-32">It is a long established
+        fact that a reader will be distracted by
+        the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.
+      </p>
+      <button id="view-more" class=" bg-[#0e7a81] hover:bg-[#33848a] py-2 px-4 rounded-md text-white  mb-5"><a
+          href="#adopt-best">View More</a></button>
+      <img class="md:w-[700px] mx-auto " src="img/pet.webp" alt="">
+    </section>
+
+
+    <section class="md:mt-7  mx-auto">
+      <div id="adopt-best" class="text-center">
+        <h1 class="text-3xl md:text-5xl font-extrabold mb-7">Adopt Your Best Friend</h1>
+        <p class="text-gray-500  md:text-base mb-10">It is a long established fact that a reader will be distracted by
+          the readable content of a <br> page when looking at its layout. The point of using Lorem Ipsum is that it has
+          a.</p>
+      </div>
+    </section>
+
+
+
+    <section>
+      <div id="category-container" class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-2 lg:gap-32 gap-5 ">
+        <!-- Button API -->
+      </div>
+
+    </section>
+
+    <div class="flex justify-between items-center my-10">
+      <h2 id="deal" class="md:text-xl text-sm font-extrabold">Best Deal For you</h2>
+      <button id="price" onclick="loadAllPetsSortByPrice()"
+        class="md:text-base text-xs text-white bg-[#0e7a81] hover:bg-[#f1f1f1] hover:text-black cursor-pointer  py-2 px-5 rounded-md font-bold">Sort
+        by Price </button>
+    </div>
+
+
+    <!-- spinner -->
+    <!-- <div id="spinner"></div> -->
+    <div id="spinner" class="flex justify-center mt- mb-5"> <span class="loading loading-bars loading-xl"></span></div>
+    
+    <section class="flex lg:flex-row md:flex-col flex-col justify-between">
+      <div id="pets-container"
+        class="md:w-[75%] md:col-span-4 col-span-full grid h-fit w-fit lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-3">
+        <!-- Pets API -->
+      </div>
+
+      <div id="cart-container"
+        class="md:w-[25%] md:col-span-1 grid grid-cols-2 col-span-full h-fit w-fit bg-white border-1 border-gray-300 rounded-md md:ml-5 md:mt-0 mt-5">
+        <!-- Cart API -->
+      </div>
+
+
+
+    </section>
+  </main>
+
+  <footer class="bg-black mt-7 mb-5">
+    <div class="md:flex flex-cols-1 md:justify-between items-center py-10 mb-5 md:mx-20">
+      <div class="mb-7  items-center md:ml-0 mx-5">
+        <div class="flex items-center gap-2">
+          <div><img class="w-6" src="img/logo.webp" alt=""></div>
+          <a class=" text-2xl text-white font-bold">Peddy</a>
+        </div>
+        <p class="text-white">Location: av. Washington 165, NY 54003</p>
+        <p class="text-white">Phone: +31 85 964 47 25</p>
+        <p class="text-white">Email: info@yourdomain.com</p>
+        <p class="text-white">Openings hours: 9.00 AM - 5.00 PM</p>
+        <div class="flex items-center mt-3 gap-3 ">
+          <a href="https://www.facebook.com/mahfuzur.rahman.98284" target="_blank"><i
+              class="fa-brands fa-facebook text-4xl text-[#0090ff]"></i></a>
+          <a href="https://x.com/" target="_blank"><i class="fa-brands fa-x-twitter text-4xl text-white"></i></a>
+          <a href="https://www.youtube.com/" target="_blank"><i
+              class="fa-brands fa-youtube text-4xl text-[#ff0000]"></i></a>
+          <a href="https://www.instagram.com/?hl=en" target="_blank"><i
+              class="fa-brands fa-square-instagram text-4xl text-[#dc3973]"></i></a>
+
+        </div>
+      </div>
+
+
+
+      <div class="mb-7 md:ml-0 mx-5 text-white">
+        <h3>Useful Links</h3>
+        <ul>
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Animals</li>
+          <li>Foundation</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+
+      <div id="contact" class="md:ml-0 mx-5">
+        <h3 class="text-white">Drop a Message</h3>
+        <input class="my-3 py-2 px-4 rounded-md text-white" type="text" placeholder="Inter Your Email">
+        <div>
+          <button class="btn hover:bg-[#0e7a81]  "><span class="text-black hover:text-white">Subscribe</span> </button>
+        </div>
+      </div>
+
+
+
+    </div>
+  </footer>
+
+
+
+
+  <!-- Open the modal using ID.showModal() method -->
+  <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+  <dialog id="pets_modal" class="modal modal-bottom sm:modal-middle">
+    <div class="modal-box">
+
+      <div id="pet-details-container">
+        <!-- Modal api -->
+      </div>
+
+
+      <div class="modal-action">
+        <form method="dialog" class="w-full ">
+          <!-- if there is a button in form, it will close the modal -->
+          <button class="btn "><span class="text-[#0e7a81] md:px-[180px] px-[118px] text-lg ">Cancel</span> </button>
+        </form>
+      </div>
+    </div>
+  </dialog>
+
+
+
+
+  <!-- <button onclick="startCountdown()" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded shadow">
+    Open Modal
+  </button> -->
+
+  <!-- Modal -->
+  <div>
+    <div id="overlay" class="inset-0 bg-[#000000] opacity-70 fixed h-screen hidden "></div>
+
+    <div id="countdownModal"
+      class="hidden fixed inset-0 items-center justify-center md:mx-5 mx-10">
+
+      <div class="bg-[#f1f1f1] md:w-[30%] md:h-[50%] h-[50%] mx-auto rounded-lg z-40 mt-12 ">
+        <img class="md:w-16 w-10 md:mb-8 mb-5 mx-auto pt-5" src="./img/ruiton.png">
+        <h1 class="md:text-4xl text-2xl text-black text-center font-extrabold mt-[-20px] md:mb-5 mb-3">Congrates!</h1>
+        <p class="text-black md:text-base text-sm text-center font-semibold">Adoption Process is Start For your pet</p>
+        <!-- <span id="count-down" class="text-center text-5xl flex justify-center font-bold text-white mt-8"></span> -->
+      </div>
+
+      <!-- modal content -->
+      <div
+        class=" p-8 md:text-5xl text-3xl font-extrabold text-black md:mb-20 text-center md:mt-[-120px] mt-[-100px] z-50"
+        id="modalContent">
+        Starting...
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="./js/category.js"></script>
+  <script src="./js/pets.js"></script>
+  <script src="./js/pet_Id.js"></script>
+  <script src="./js/modal.js"></script>
+  <script src="./js/cartjs"></script>
+  <script src="./js/count_down_modal.js"></script>
+  <script src="./js/sort.js"></script>
+
+
+</body>
+
+</html>

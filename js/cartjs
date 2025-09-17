@@ -1,0 +1,25 @@
+
+
+function loadPetImage(id){
+    const url = `https://openapi.programming-hero.com/api/peddy/pet/${id}`;
+        fetch(url)
+            .then(res => res.json())
+            .then(api => displayPetImage(api.petData))
+            .catch(err => console.log(err))
+}
+
+
+const displayPetImage = (pet) => {
+    // console.log(pet)
+
+    const cartContainer = document.getElementById('cart-container')
+    cartContainer.classList.remove('hidden')
+    
+        const petBtn = document.createElement('div');
+        petBtn.innerHTML = `
+            <div class="bg-white border-1 border-gray-300 p-1 m-2 mr-1 rounded-xl">
+                  <img class = 'rounded-md w-36 h-24 object-cover' src="${pet.image}" alt="">
+            </div>
+        `
+        cartContainer.appendChild(petBtn)
+}

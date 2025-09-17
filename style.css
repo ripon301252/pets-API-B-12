@@ -1,0 +1,9 @@
+.active{
+    background-color: #e7f2f2;
+    border: 1px solid #0e7a81;
+    border-radius: 50px;
+    padding: 10px 0;
+    padding-left: 35px;
+    padding-right: 60px;
+    width: fit-content;
+}
